@@ -1,1 +1,67 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.card {
+  width: 120px; /* Reducimos el ancho de la carta */
+  height: 180px; /* Reducimos la altura de la carta */
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-suit,
+.bottom-suit {
+  font-size: 1.2em; /* Reducimos el tamaño de los símbolos */
+}
+
+.bottom-suit {
+  transform: rotate(180deg); /* Giramos el símbolo inferior */
+  align-self: flex-end;
+}
+
+.number {
+  font-size: 2em; /* Reducimos el tamaño del número */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que el número ocupe el espacio disponible */
+}
+
+.heart,
+.diamond {
+  color: red;
+}
+
+.spade,
+.club {
+  color: black;
+}
+
+/* Animación opcional */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-in-out;
+}
